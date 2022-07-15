@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6fa3bd69d6.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        .product1 {
+            position: relative;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .product-category1 {
+            padding: 0 10px;
+            font-size: 30px;
+            font-weight: 500;
+            text-decoration: none;
+            font-family: 'Dongle', sans-serif;
+        }
+
+        .product-container1 {
+            padding: 0 10vw;
+            display: flex;
+            overflow: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .product-container1::website-scrollbar {
+            display: none;
+        }
+
+        .product-card1 {
+            flex: 0 0 auto;
+            width: 250px;
+            height: 450px;
+            margin-right: 40px;
+        }
+
+        .product-image1 {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+
+        }
+
+        .product-thumb {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .discount-tag1 {
+            position: absolute;
+            background-color: #fff;
+            border-radius: 5px;
+            color: teal;
+            right: 10px;
+            top: 10px;
+            text-decoration: capitalize;
+        }
+
+        .card-btn1 {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translate(-50%);
+            padding: 10px;
+            width: 90%;
+            text-transform: capitalize;
+            border: none;
+            outline: none;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: 0.5s;
+            cursor: pointer;
+            opacity: 0;
+        }
+
+        .product-card1:hover .card-btn1 {
+            opacity: 1;
+        }
+
+        .card-btn1:hover {
+            background: teal;
+            color: #fff;
+        }
+
+        .product-info1 {
+            width: 100%;
+            height: 100%;
+            padding-top: 10px;
+        }
+
+        .product-short-description1 {
+            width: 100%;
+            height: 20px;
+            line-height: 20px;
+            overflow: hidden;
+            opacity: 0.5;
+            text-transform: capitalize;
+            margin: 5px 0;
+            font-family: 'Dongle', sans-serif;
+            font-size: 15px;
+        }
+
+        .price1 {
+            font-weight: 900;
+            font-size: 13px;
+        }
+
+        .actual-price1 {
+            margin-left: 20px;
+            opacity: 0.5;
+            text-decoration: line-through;
+        }
+
+        .pre-btn1,
+        .nxt-btn2 {
+            border: none;
+            width: 10vw;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0)0%, #fff 100%);
+            cursor: pointer;
+            z-index: 9;
+
+        }
+
+        .pre-btn1 {
+            left: 0;
+            transform: rotate(180deg);
+        }
+
+        .nxt-btn2 {
+            right: 0;
+        }
+
+        .pre-btn1 img,
+        .nxt-btn2 img {
+            opacity: 0.2;
+        }
+
+        .product-brands1 {
+            color: red;
+            font-size: 13px;
+            font-family: 'Dongle', sans-serif;
+        }
+
+        .product-brands1 {
+            font-size: 13px;
+            font-family: 'Dongle', sans-serif;
+
+        }
+
+        /* another container */
+        #headings {
+            text-align: center;
+            margin-top: 50px;
+            font-family: 'Dongle', sans-serif;
+        }
+
+        /* container6 */
+        #container6 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            width: 100%;
+            height: 600px;
+            border: 2px solid transparent;
+        }
+
+        #container6>div {
+            width: 100%;
+            height: 100%;
+            border: 2px solid transparent;
+        }
+
+        .note {
+            font-family: sans-serif;
+            font-size: 15px;
+        }
+
+        .nutrition {
+            font-family: sans-serif;
+            font-size: 15px;
+        }
+        #line{
+            color: #08a;
+            font-family: 'Dongle', sans-serif;
+            font-size: 13px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <section id="product1">
+        <h2 class="product-category1">Trending Now</h2>
+        <button class="pre-btn1"><i class="fas fa-chevron-right"></i></button>
+        <button class="nxt-btn2"><i class="fas fa-chevron-right"></i></button>
+
+        <div class="product-container1">
+            <div class="product-card1">
+                <div class="product-image1">
+                    <span>50% off</span>
+                    <img height="100%" width="100%" src="black boot.jpeg" alt="">
+                    <button class="card-btn1">add to wishlist</button>
+                </div>
+                <div class="product-info1">
+                    <h2 class="product-brands1">Limited-Time Sale</h2>
+                    <p class="product-short-description1">BAREFOOT DREAMS</p>
+                    <span class="price1">$44.97</span>
+                    <span class="actual-price1">$90.00</span>
+                </div>
+            </div>
+            <div class="product-card1">
+                <div class="product-image1">
+                    <span>50% off</span>
+                    <img height="100%" width="100%" src="girl shoes.jpeg" alt="">
+                    <button class="card-btn1">add to wishlist</button>
+                </div>
+                <div class="product-info1">
+                    <h2 class="product-brands1">Limited-Time Sale</h2>
+                    <p class="product-short-description1">BAREFOOT DREAMS</p>
+                    <span class="price1">$44.97</span>
+                    <span class="actual-price1">$90.00</span>
+                </div>
+            </div>
+            <div class="product-card1">
+                <div class="product-image1">
+                    <span>50% off</span>
+                    <img height="100%" width="100%" src="boot.jpeg" alt="">
+                    <button class="card-btn1">add to wishlist</button>
+                </div>
+                <div class="product-info1">
+                    <h2 class="product-brands1">Limited-Time Sale</h2>
+                    <p class="product-short-description1">BAREFOOT DREAMS</p>
+                    <span class="price1">$44.97</span>
+                    <span class="actual-price1">$90.00</span>
+                </div>
+            </div>
+            <div class="product-card1">
+                <div class="product-image1">
+                    <span>50% off</span>
+                    <img height="100%" width="100%" src="brown.jpeg" alt="">
+                    <button class="card-btn1">add to wishlist</button>
+                </div>
+                <div class="product-info1">
+                    <h2 class="product-brands1">Limited-Time Sale</h2>
+                    <p class="product-short-description1">BAREFOOT DREAMS</p>
+                    <span class="price1">$44.97</span>
+                    <span class="actual-price1">$90.00</span>
+                </div>
+            </div>
+            <div class="product-card1">
+                <div class="product-image1">
+                    <span>50% off</span>
+                    <img height="100%" width="100%" src="uder$100.jpeg" alt="">
+                    <button class="card-btn1">add to wishlist</button>
+                </div>
+                <div class="product-info1">
+                    <h2 class="product-brands1">Limited-Time Sale</h2>
+                    <p class="product-short-description1">BAREFOOT DREAMS</p>
+                    <span class="price1">$44.97</span>
+                    <span class="actual-price1">$90.00</span>
+                </div>
+            </div>
+            <div class="product-card1">
+                <div class="product-image1">
+                    <span>50% off</span>
+                    <img height="100%" width="100%" src="purple.jpeg" alt="">
+                    <button class="card-btn1">add to wishlist</button>
+                </div>
+                <div class="product-info1">
+                    <h2 class="product-brands1">Limited-Time Sale</h2>
+                    <p class="product-short-description1">BAREFOOT DREAMS</p>
+                    <span class="price1">$44.97</span>
+                    <span class="actual-price1">$90.00</span>
+                </div>
+            </div>
+            <div class="product-card1">
+                <div class="product-image1">
+                    <span>50% off</span>
+                    <img height="100%" width="100%" src="lovestictch.jpeg" alt="">
+                    <button class="card-btn1">add to wishlist</button>
+                </div>
+                <div class="product-info1">
+                    <h2 class="product-brands1">Limited-Time Sale</h2>
+                    <p class="product-short-description1">BAREFOOT DREAMS</p>
+                    <span class="price1">$44.97</span>
+                    <span class="actual-price1">$90.00</span>
+                </div>
+            </div>
+            <div class="product-card1">
+                <div class="product-image1">
+                    <span>50% off</span>
+                    <img height="100%" width="100%" src="alexa.jpeg" alt="">
+                    <button class="card-btn1">add to wishlist</button>
+                </div>
+                <div class="product-info1">
+                    <h2 class="product-brands1">Limited-Time Sale</h2>
+                    <p class="product-short-description1">BAREFOOT DREAMS</p>
+                    <span class="price1">$44.97</span>
+                    <span class="actual-price1">$90.00</span>
+                </div>
+            </div>
+            <div class="product-card1">
+                <div class="product-image1">
+                    <span>50% off</span>
+                    <img height="100%" width="100%" src="white.jpeg" alt="">
+                    <button class="card-btn1">add to wishlist</button>
+                </div>
+                <div class="product-info1">
+                    <h2 class="product-brands1">Limited-Time Sale</h2>
+                    <p class="product-short-description1">BAREFOOT DREAMS</p>
+                    <span class="price1">$44.97</span>
+                    <span class="actual-price1">$90.00</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <div id="headings">
+        <h2>Stock Up on the Classics</h2>
+    </div>
+    <div id="container6">
+        <div>
+            <img height="70%" width="100%" src="juicer.jpeg" alt="">
+            <h3 class="note">Appliances Under $100</h3>
+            <p class="nutrition">Support a healthy lifestyle with appliances from DASH, Nutribullet, Cuisinart and more.
+            </p>
+            <a id="line" href="">Kitchen Appliances</a>
+        </div>
+        <div>
+            <img height="70%" width="100%" src="dressed.jpeg" alt="">
+            <h3 class="note">What's Hot Right Now</h3>
+            <p class="nutrition">Flowy florals to sleek and satin—all up to 65% off.</p>
+            <a  id="line" href="">Best-Selling Dresses</a>
+        </div>
+        <div>
+            <img height="70%" width="100%" src="box.jpeg" alt="">
+            <h3 class="note">Reset Your Space from $19.97</h3>
+            <p class="nutrition">Give your room a home-show worthy makeover.</p>
+            <a id="line" href="">Reset Your Space</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    const productContainers = [...document.querySelectorAll('.product-container1')];
+    const nxtBtn = [...document.querySelectorAll('.nxt-btn2')];
+    const preBtn = [...document.querySelectorAll('.pre-btn1')];
+
+    productContainers.forEach((item, i) => {
+        let containerDimensions = item.getBoundingClientRect();
+        let containerWidth = containerDimensions.width;
+
+        nxtBtn[i].addEventListener('click', () => {
+            item.scrollLeft += containerWidth;
+        })
+
+        preBtn[i].addEventListener('click', () => {
+            item.scrollLeft -= containerWidth;
+        })
+    })
+</script>

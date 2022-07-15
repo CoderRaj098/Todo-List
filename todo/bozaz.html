@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #Bozaz{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #product{
+            width: 21%;
+        }
+        #product_list{
+            width: 40%;
+        }
+        h1{
+            color: #62a2c4;
+            border-bottom: 2px solid lightgrey;
+            padding-bottom: 20px;
+        }
+        input,
+        label,
+        textarea,
+        select{
+            margin: 10px;
+            margin-left: 0%;
+        }
+        input[type="text"],
+        select,
+        textarea{
+            padding: 8px;
+            width: 250px;
+            border-radius: 5px;
+            border: 2px solid black;
+            color: gray;
+        }
+        input[type="submit"]{
+            padding: 10px 20px;
+            background-color: #007aff;
+            color: white;
+            cursor: pointer;
+            border: 2px solid #007aff;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        th,
+        td{
+            padding: 5px 15px 5px 15px;
+            border-bottom: 2px solid lightgrey;
+        }
+    </style>
+</head>
+<body>
+    <div id="Bozaz">
+        <div id="product">
+            <h1>Add Product</h1>
+            <form action="">
+                <label>Category</label> <br>
+                <select name="" id="category">
+                    <option value="Electronics">Electronics</option>
+                    <option value="Furniture">Furniture</option>
+                    <option value="Home application">Home application</option>
+                    <option value="books">Books</option>
+                </select> <br>
+                <label >Title</label> <br>
+                <input type="text" name="" id="title" placeholder="Product Information"> <br>
+                <label>Description</label> <br>
+                <textarea name="" id="description" cols="20" rows="5" placeholder="Description"></textarea> <br>
+                <label >Price</label> <br>
+                <input type="text" name="" id="price" placeholder="Price"> <br>
+                <input type="submit" value="Add">
+            </form>
+        </div>
+    <div id="product_list">
+    <h1>Product Info</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Category</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    </div>
+    </div>
+
+    
+    
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit", my_pro);
+    var arr = JSON.parse(localStorage.getItem("pro-item"));
+
+    // var a = [];
+    display_product(arr);
+    function my_pro(event) {
+        event.preventDefault();
+        var category = document.querySelector("#category").value;
+        var title = document.querySelector("#title").value;
+        var description = document.querySelector("#description").value;
+        var price = document.querySelector("#price").value;
+        console.log(category,title,description,price);
+
+        var product_data = {
+            cate:category,
+            tit:title,
+            desc:description,
+            pri:price,
+        }
+        arr.push(product_data);
+        localStorage.setItem("pro-item", JSON.stringify(arr));
+
+        display_product(arr);
+        
+    }
+
+    function display_product(arr) {
+        document.querySelector("tbody").innerHTML = "";
+        var count = 1;
+        arr.map(function(elem){
+            var tr = document.createElement("tr");
+            var td1 = document.createElement("td");
+            td1.textContent = count;
+            count++;
+            var td2 = document.createElement("td");
+            td2.textContent = elem.cate;
+            var td3 = document.createElement("td");
+            td3.textContent = elem.tit;
+            var td4 = document.createElement("td");
+            td4.textContent = elem.desc;
+            var td5 = document.createElement("td");
+            td5.textContent = elem.pri;
+            document.querySelector("tbody").append(tr);
+            tr.append(td1, td2, td3, td4, td5);
+        })
+    }
+
+</script>
